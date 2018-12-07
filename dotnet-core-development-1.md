@@ -36,3 +36,62 @@ dotnet dev-certs https --trust
 dotnet ef migrations add <Название миграции>
 dotnet ef database update
 ```
+
+### Изменение портов приложения для запуска нескольких приложений
+
+Изменения в файле Program.cs
+
+```csharp
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var configuration = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .Build();
+
+            CreateWebHostBuilder(args, configuration).Build().Run();
+        }
+
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args, IConfiguration configuration) =>
+            WebHost.CreateDefaultBuilder(args)
+            .UseConfiguration(configuration)
+            .UseStartup<Startup>();
+    }
+```
+
+и запуск приложения с параметрами:
+
+```bash
+dotnet run --urls "http://*:5101;https://*:5102"
+```
+
+Вариант с файлом конфигурации
+
+```csharp
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("hosting.json", optional: true, reloadOnChange: true)
+                .Build();
+
+            CreateWebHostBuilder(args, configuration).Build().Run();
+        }
+
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args, IConfiguration configuration) =>
+            WebHost.CreateDefaultBuilder(args)
+            .UseConfiguration(configuration)
+            .UseStartup<Startup>();
+    }
+```
+
+и содержимое файла *hosting.json* в корне проекта
+
+```json
+{
+  "urls": "http://*:5101;https://*:5102"
+}
+```

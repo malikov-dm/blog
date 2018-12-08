@@ -83,7 +83,7 @@ server {
     listen [::]:80;
     server_name dmalikov.rdvb.ru;
     location / {
-        proxy_pass http://localhost:5000;
+        proxy_pass https://localhost:5001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection keep-alive;

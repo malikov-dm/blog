@@ -95,3 +95,32 @@ public class Program
   "urls": "http://*:5101;https://*:5102"
 }
 ```
+
+При установке пакета на сервере с Ubuntu 18.04 я получил внезапную ошибку:
+
+```error
+ The current .NET SDK does not support targeting .NET Core 2.1.
+```
+
+Видимо, дело в этом:
+
+```info
+.NET Core SDKs installed:
+  2.1.200 [/usr/share/dotnet/sdk]
+```
+
+Ищем пути установить более свежий SDK и находим только здесь: <https://dev.to/carlos487/installing-dotnet-core-in-ubuntu-1804-7lp>
+
+```bash
+sudo apt-key adv --keyserver packages.microsoft.com --recv-keys EB3E94ADBE1229CF
+sudo apt-key adv --keyserver packages.microsoft.com --recv-keys 52E16F86FEE04B979B07E28DB02C46DF417A0893
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-bionic-prod bionic main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-get update
+sudo apt install dotnet-sdk-2.1
+```
+
+Ну или вместо последнего пакета поискать что там есть посвежее:
+
+```bash
+sudo apt search dotnet-sdk-2.1
+```

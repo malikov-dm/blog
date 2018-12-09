@@ -2,6 +2,8 @@
 
 Ссылка, на которую я ориентировался: <https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-with-ssl-as-a-reverse-proxy-for-jenkins>
 
+## Nginx and TLS
+
 ### Install Nginx
 
 Update your package lists and install Nginx:
@@ -94,7 +96,7 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository universe
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx 
+sudo apt-get install python-certbot-nginx
 ```
 
 Certbot's DNS plugins are also available for your system which can be used to automate obtaining a wildcard certificate from Let's Encrypt's ACMEv2 server. To use one of these plugins, you must have configured DNS for the domain you want to obtain a certificate for with a DNS provider that Certbot has a plugin for. A list of these plugins and more information about using them can be found here. To install one of these plugins, run the installation command above but replace python-certbot-nginx with the name of the DNS plugin you want to install.

@@ -25,4 +25,3 @@
 ## Диаграмма Эйлера-Венна для модификаторов доступа
 
 ![Access Modifiers 1](img/access-modifiers-1.PNG)![Access Modifiers 2](img/access-modifiers-2.PNG)
-

@@ -68,6 +68,23 @@ function go() {
 
 Не забудьте точку и пробел после нее.
 
+***Алиасы для команд***
+
+```bash
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+```
+
+В терминале `Git` их можно использовать непосредственно, для `Powershell` придется написать функции как я показывал выше.
 
 ## Начало работы с файлами и изменениями
 

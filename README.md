@@ -1,4 +1,4 @@
-# blog
+# Blog about SharePoint and Dotnet Core
 
 Blog about SharePoint and Dotnet Core
 

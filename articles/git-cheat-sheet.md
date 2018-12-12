@@ -22,6 +22,18 @@ git config --global core.safecrlf true
 git config --global core.quotepath off
 ```
 
+***Алиасы***
+
+```bash
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
+```
+
 ## Начало работы с файлами и изменениями
 
 ```bash
@@ -30,6 +42,40 @@ git add .                                   #добавление всех фа�
 git add <file_name1> <file_name2> <...>     #добавление указанных файлов и каталогов
 git commit -m "First Commit"                #создание коммита с комментарием в командной строке
 git commit                                  #создание коммита с открытием внешнего текстового редактора
+```
+
+## Проверка состояния и истории
+
+***Состояние***
+
+```bash
+git status
+```
+
+***История***
+
+Различные ключи отвечают за информацию, отображаемую в терминале
+
+```bash
+git log
+git log --pretty=oneline
+git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+git log --pretty=oneline --all
+```
+
+Форматирование вывода
+
+```bash
+git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+```
+
+или так
+
+```bash
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 ```
 
 ## Подключение внешнего репозитория и начало работы

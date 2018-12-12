@@ -115,6 +115,17 @@ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 ## Подключение внешнего репозитория и начало работы
 
+Через `git clone`:
+
+```bash
+git clone https://malikov-dm@bitbucket.org/malikov-dm/metanit.git
+```
+
+Эта команда создаст папку с репозиторием, никакую папку больше создавать не нужно.
+То есть, если вы находитесь в папке `Bitbucket`, то выполнять команду `git clone` надо в ней.
+
+Через `git pull`:
+
 ```bash
 git init
 git remote add origin <repository_url>

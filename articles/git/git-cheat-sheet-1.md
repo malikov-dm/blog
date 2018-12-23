@@ -59,6 +59,15 @@ go feature      #переключились на feature
 notepad $PROFILE
 ```
 
+> Если профиль не откроется (возможно, переменная `$profile` указана неверно), его нужно задать явно.
+> В моем случае не было папки `WindowsPowerShell`, но была папка `PowerShell`, что я и указазал в пути до профиля:
+>
+> ```powershell
+> $profile = "C:\Users\Username\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+> ```
+>
+> После этого профиль работает корректно
+
 и добавим в конец следующий код:
 
 ```powershell

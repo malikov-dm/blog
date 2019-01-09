@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Init default Program.cs content</Title>
+      <Author>Dmitry Malikov</Author>
+      <Description>Inserting default content of Program.cs file</Description>
+      <Shortcut>newcons</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object>
+          <ID>namespace</ID>
+          <Default>Solution</Default>
+          <ToolTip>Namespace (could be same as project folder name)</ToolTip>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+using System;
+using System.IO;
+
+namespace $namespace$
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+#if DEBUG
+            Console.SetIn(File.OpenText("input.txt"));
+            var fs = new FileStream("output.txt", FileMode.OpenOrCreate);
+            var sw = new StreamWriter(fs)
+            {
+                AutoFlush = true
+            };
+            Console.SetOut(sw);
+#endif
+        }
+    }
+}
+
+            ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

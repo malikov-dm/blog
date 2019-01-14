@@ -1,8 +1,57 @@
 # Шпаргалка по использованию Git 1
 
+## Установка
+
+[Официальный сайт Git](https://git-scm.com/downloads)
+
+Linux:
+
+```bash
+apt-get install git
+```
+
+Windows:
+
+[Установка расширения PowerShell для работы с Git (posh-git)](https://github.com/dahlbyk/posh-git#installation)
+
+Если что-то идет не так:
+
+```powershell
+remove-module PowerShellGet,PackageManagement -force
+Import-Module -Name PowerShellGet -Force;
+Import-PackageProvider -Name PowerShellGet -Force
+PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+```
+
+Обновление:
+
+```powershell
+git update-git-for-windows
+```
+
 ## Конфигурация и подготовка к работе
 
 ### Настройка конфига и алиасов
+
+***Открыть конфиг на редактирование***
+
+```bash
+git config --global -e
+```
+
+***Установка NotePad++ в качестве редактора по умолчанию***
+
+32-bit
+
+```bash
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+64-bit
+
+```bash
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
 
 ***Имя и почта***
 
@@ -104,3 +153,17 @@ alias get='git '
 ```
 
 В терминале `Git` их можно использовать непосредственно, для `Powershell` придется написать функции как я показывал выше.
+
+***Подключение файлов в конфиге***
+
+В целях уменьшения количества дублирующих конфигов можно использовать их повторно.
+
+Конфиг можно подключить по ссылке в другом конфиге:
+
+```bash
+git config --add include.path ../gitconfig
+```
+
+Можно создать конфиг в корне проекта, чтобы делиться им с другими разработчиками (так как системные, глобальные и локальные конфиги в репозиторий не попадают), подключить его вышеуказанной программой и использовать один конфиг в проекте.
+
+[Инициализация репозитория, подключение к удаленному репозиторию, история](git-cheat-sheet-2.md)

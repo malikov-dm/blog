@@ -9,6 +9,7 @@ Blog about SharePoint and Dotnet Core
 * [Конфигурация и подготовка к работе](articles/git/git-cheat-sheet-1.md)
 * [Инициализация репозитория, подключение к удаленному репозиторию, история](articles/git/git-cheat-sheet-2.md)
 * [Работа с ветками](articles/git/git-cheat-sheet-3.md)
+* [Отмена изменений (reset)](articles/git/git-cheat-sheet-4.md)
 
 ### Amazon
 

@@ -105,6 +105,6 @@ git push -u origin master
 
 ```bash
 [master ≡]
-````
+```
 
 [< Конфигурация и подготовка к работе](git-cheat-sheet-1.md) | [Работа с ветками >](git-cheat-sheet-3.md)

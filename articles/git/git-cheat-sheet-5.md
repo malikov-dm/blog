@@ -117,7 +117,7 @@ git log <ref_2>...<ref_1> --boundary --graph
 --abbrev-commit                             # укороченный идентификатор коммита  
 --oneline                                   # обе команды выше сразу  
 --no-decodate                               # отключает декорирование  
---pretty=format: "<format_string>"          # отображает коммит в соответствии с format_string 
+--pretty=format: "<format_string>"          # отображает коммит в соответствии с format_string
 ```
 
  Вывод истории работает также для файлов, директорий и групп файлов
@@ -136,8 +136,32 @@ git log <ref_2>..<ref_1> -- <dir1> <dir2> <file_path2> <file_path1>
 
 ```bash
 git log --grep "<search_string>"            # поиск по комментариям к коммитам
+git log -G"<regex>" -p                      # поиск по содержимому по perl-совместимому регулярному выражению
 ```
 
+Поиск изменений в фрагменте файла, ограниченом двумя регулярными выражениями:
+
+```bash
+git log -L "<regex1>","<regex2>":<file_path1>
+```
+
+Поиск по телу функции, имя которой определено регулярным выражением:
+
+```bash
+git log -L :"<regex1>":<file_path1>
+```
+
+### Просмотр коммита, в котором была изменена та или иная строка файла: git blame
+
+```bash
+git blame <file_path1>                      #
+```
+
+В более читаемом виде:
+
+```bash
+git blame <file_path1> --date=short -L <start_line_number>,<end_line_mumber>
+```
 
 ***
 

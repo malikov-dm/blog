@@ -25,7 +25,8 @@ Blog about SharePoint and Dotnet Core
 
 ### Ubuntu
 
-* [Ubuntu Package Distribution](articles/ubuntu-package-distribution.md)
+* [Installation Ubuntu on Hyper-V](articles/ubuntu/ubuntu-hyper-v-install.md)
+* [Ubuntu Package Distribution](articles/ubuntu/ubuntu-package-distribution.md)
 
 ### CSharp
 

@@ -19,7 +19,7 @@ Blog about SharePoint and Dotnet Core
 
 ### Dotnet Core
 
-* [Dotnet Core Development](articles/dotnet-core-development.md)
+* [Dotnet Core Development](articles/dotnet-core-development-1.md)
 * [Nginx Dotnet Core](articles/nginx-dotnet-core.md)
 * [Dotnet Core Reference](articles/dotnet-core-reference.md)
 * [Connect Soap Service Dotnet core](articles/connect-soap-service-dotnet-core.md)

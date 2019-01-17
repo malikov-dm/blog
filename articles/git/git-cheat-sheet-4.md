@@ -140,4 +140,4 @@ git clean -dxf                          # -d - удалит не только н
 
 ***
 
-[< Работа с ветками](git-cheat-sheet-3.md) | [Просмотр >](git-cheat-sheet-5.md)
+[< Работа с ветками](git-cheat-sheet-3.md) | [Просмотр (git diff) >](git-cheat-sheet-5.md)

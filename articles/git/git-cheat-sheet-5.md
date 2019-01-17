@@ -1,6 +1,6 @@
 # Шпаргалка по использованию Git 5
 
-## Просмотр
+## Просмотр (git diff)
 
 ### Просмотр изменений: git diff
 
@@ -165,4 +165,4 @@ git blame <file_path1> --date=short -L <start_line_number>,<end_line_mumber>
 
 ***
 
-[< Отмена изменений (reset)](git-cheat-sheet-4.md) |
+[< Отмена изменений (reset)](git-cheat-sheet-4.md) | [Слияние (git merge) >](git-cheat-sheet-6.md)

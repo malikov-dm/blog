@@ -40,7 +40,7 @@ git log --oneline --cherry-pick feature...master    # коммиты из пер
 В выводе будет понятно, какой коммит из какой ветки, если использовать флаг `--left-right`:
 
 ```bash
-git log --oneline --cherry-mark --left-right feature...master 
+git log --oneline --cherry-mark --left-right feature...master
 ```
 
 Широко используемый псевдоним `--cherry` включает в себя команды `--cherry-mark --right-only --no-merges`. В таком случае будут выведены коммиты из правой ветки (`master`, отмечены знаком `+` в выводе), эквивалентные коммиты (отмечены знаком `=` в выводе), а коммиты слияния выводиться не будут.
@@ -48,6 +48,3 @@ git log --oneline --cherry-mark --left-right feature...master
 ```bash
 git log --oneline --cherry feature...master
 ```
-
-
-

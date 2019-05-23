@@ -32,3 +32,4 @@ Blog about SharePoint and Dotnet Core
 ### CSharp
 
 * [C# Sandbox](articles/csharp-sandbox.md)
+* [Yield](articles/csharp/yield.md)

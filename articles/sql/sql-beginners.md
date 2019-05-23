@@ -17,11 +17,9 @@ sudo apt-get install -y mssql-server
 sudo /opt/mssql/bin/mssql-conf setup
 ```
 
-
 ## Установка тестовых БД
 
 ```bash
 wget https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak
 wget https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak
-```
-
+``` 
